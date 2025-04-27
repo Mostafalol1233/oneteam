@@ -18,9 +18,9 @@ const NavBar: React.FC = () => {
           <div className="flex items-center ml-6">
             <div className="w-10 h-10 rounded-full overflow-hidden">
               <img 
-                src="/image_1745730872530.png" 
+                src="/logo.jpg" 
                 alt="ONE TEAM Logo" 
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
               />
             </div>
             <span className="font-poppins font-bold text-xl ml-2">ONE TEAM</span>

@@ -136,9 +136,9 @@ const HeroSection: React.FC = () => {
               ></motion.div>
               <div className="rounded-full w-full h-full overflow-hidden border-4 border-white shadow-2xl">
                 <img 
-                  src="/image_1745730872530.png" 
+                  src="/logo.jpg" 
                   alt="ONE TEAM Logo" 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
