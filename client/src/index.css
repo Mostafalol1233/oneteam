@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 280 50% 30%;  /* Purple: #5E1C80 */
+  --primary-foreground: 210 20% 98%;
+  --secondary: 180 100% 40%;  /* Teal: #00D4D4 */
+  --secondary-foreground: 220 14.3% 95.9%;
+  --accent: 345 100% 65%;  /* Pink: #FF5A7E */
+  --accent-foreground: 210 20% 98%;
+  --accent2: 35 100% 65%;  /* Orange: #FFB84D */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 280 50% 30%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 180 100% 40%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 345 100% 65%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom CSS classes */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.bg-primary {
+  background-color: #5E1C80;
+}
+
+.bg-primaryLight {
+  background-color: #7E3AA0;
+}
+
+.bg-primaryDark {
+  background-color: #4A1567;
+}
+
+.bg-secondary {
+  background-color: #00D4D4;
+}
+
+.bg-accent {
+  background-color: #FF5A7E;
+}
+
+.bg-accent2 {
+  background-color: #FFB84D;
+}
+
+.text-primary {
+  color: #5E1C80;
+}
+
+.text-secondary {
+  color: #00D4D4;
+}
+
+.text-accent {
+  color: #FF5A7E;
+}
+
+.text-accent2 {
+  color: #FFB84D;
+}
+
+.border-primary {
+  border-color: #5E1C80;
+}
+
+.border-secondary {
+  border-color: #00D4D4;
+}
+
+.border-accent {
+  border-color: #FF5A7E;
+}
+
+.border-accent2 {
+  border-color: #FFB84D;
+}
+
+.retro-grid {
+  background-size: 50px 50px;
+  background-image: linear-gradient(to right, rgba(94, 28, 128, 0.2) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(94, 28, 128, 0.2) 1px, transparent 1px);
+  transform: perspective(500px) rotateX(60deg);
+  transform-origin: bottom;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
