@@ -51,9 +51,7 @@ const AboutSection: React.FC = () => {
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent opacity-10 rounded-full"></div>
             <div className="rounded-lg shadow-lg w-full h-80 overflow-hidden">
               <div className="w-full h-full bg-gradient-to-br from-primary to-secondary p-8 flex items-center justify-center">
-                <div className="w-full h-full absolute inset-0 opacity-15">
-                  <div className="w-full h-full bg-[url('/attached_assets/image_1745730872530.png')] bg-center bg-no-repeat bg-contain"></div>
-                </div>
+
                 <div className="z-10 bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 w-full max-w-md">
                   <h3 className="text-white font-bold text-2xl text-center mb-4">برنامج تدريب احترافي</h3>
                   <p className="text-white text-center">تطوير مهارات مهنية متكاملة وإعداد للانخراط في سوق العمل بشكل فعال</p>

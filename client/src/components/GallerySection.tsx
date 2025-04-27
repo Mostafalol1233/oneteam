@@ -43,11 +43,8 @@ const GallerySection: React.FC = () => {
               whileHover={{ scale: 1.03 }}
             >
               <div 
-                className={`w-full h-full bg-gradient-to-br ${item.bgColor} p-8 flex items-center justify-center`}
+                className={`w-full h-full bg-gradient-to-br ${item.bgColor} p-8 flex items-center justify-center relative`}
               >
-                <div className="w-full h-full absolute inset-0 opacity-15">
-                  <div className="w-full h-full bg-[url('/attached_assets/image_1745730872530.png')] bg-center bg-no-repeat bg-contain"></div>
-                </div>
                 <h3 className="text-white font-bold text-2xl text-center z-10 drop-shadow-lg">{item.title}</h3>
               </div>
               <motion.div
