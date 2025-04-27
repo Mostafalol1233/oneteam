@@ -12,7 +12,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get('/api/stats', (req, res) => {
     res.json({
       eligibleAgeRange: "18-30",
-      programPartners: ["Learnova", "One Team", "EFE"],
+      programPartners: ["Learnova", "One Team"],
       registrationOpen: true,
       limitedSpots: true
     });
