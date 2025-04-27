@@ -2,24 +2,27 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const GallerySection: React.FC = () => {
-  // Gallery items with background images
+  // Gallery items with background colors and descriptions
   const galleryItems = [
     {
       title: "جلسات تدريبية تفاعلية",
-      bgColor: "from-primary to-secondary",
+      description: "تعلم من خلال ورش عمل عملية تمنحك المهارات اللازمة للنجاح",
+      bgColor: "bg-primary",
     },
     {
       title: "التدريب على المقابلات",
-      bgColor: "from-accent to-accent2",
+      description: "احصل على خبرة واقعية في المقابلات من خلال تدريبات محاكاة احترافية",
+      bgColor: "bg-accent",
     },
     {
       title: "تطوير المهارات المهنية",
-      bgColor: "from-secondary to-accent",
+      description: "طور مهاراتك في كتابة السيرة الذاتية والتواصل المهني والعرض التقديمي",
+      bgColor: "bg-secondary",
     },
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gray-50" id="gallery">
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-center font-poppins font-bold text-3xl md:text-4xl mb-12 text-primary"
@@ -31,30 +34,26 @@ const GallerySection: React.FC = () => {
           لمحات من البرنامج
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {galleryItems.map((item, index) => (
             <motion.div
               key={index}
-              className="relative overflow-hidden rounded-lg shadow-lg h-64 group"
+              className="overflow-hidden rounded-xl shadow-xl h-full"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.03 }}
+              whileHover={{ 
+                scale: 1.03,
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+              }}
             >
-              <div 
-                className={`w-full h-full bg-gradient-to-br ${item.bgColor} p-8 flex items-center justify-center relative`}
-              >
-                <h3 className="text-white font-bold text-2xl text-center z-10 drop-shadow-lg">{item.title}</h3>
+              <div className={`h-48 ${item.bgColor} flex items-center justify-center`}>
+                <h3 className="text-white font-bold text-2xl text-center px-4">{item.title}</h3>
               </div>
-              <motion.div
-                className="absolute inset-0 bg-primary bg-opacity-70 flex items-center justify-center"
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
-                <p className="text-white font-bold text-lg px-4 text-center">{item.title}</p>
-              </motion.div>
+              <div className="p-6 bg-white">
+                <p className="text-gray-700 text-center">{item.description}</p>
+              </div>
             </motion.div>
           ))}
         </div>

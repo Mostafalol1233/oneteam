@@ -9,9 +9,9 @@ const Footer: React.FC = () => {
             <div className="flex items-center justify-center md:justify-start">
               <div className="w-10 h-10 rounded-full overflow-hidden">
                 <img 
-                  src="/attached_assets/image_1745730872530.png" 
+                  src="/attached_assets/12.jpg" 
                   alt="ONE TEAM Logo" 
-                  className="w-full h-full object-contain bg-primary"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <span className="font-poppins font-bold text-xl ml-2">ONE TEAM</span>
