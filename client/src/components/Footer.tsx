@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center justify-center md:justify-start">
               <div className="w-10 h-10 rounded-full overflow-hidden">
                 <img 
-                  src="/attached_assets/12.jpg" 
+                  src="/attached_assets/image_1745730872530.png" 
                   alt="ONE TEAM Logo" 
                   className="w-full h-full object-contain"
                 />
