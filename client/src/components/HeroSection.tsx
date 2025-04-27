@@ -138,7 +138,7 @@ const HeroSection: React.FC = () => {
                 <img 
                   src="/attached_assets/image_1745730872530.png" 
                   alt="ONE TEAM Logo" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>

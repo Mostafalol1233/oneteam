@@ -50,30 +50,15 @@ const AboutSection: React.FC = () => {
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-secondary opacity-20 rounded-full"></div>
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent opacity-10 rounded-full"></div>
             <div className="rounded-lg shadow-lg w-full h-80 overflow-hidden">
-              <svg
-                viewBox="0 0 800 600"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-full h-full object-cover"
-              >
-                <rect width="800" height="600" fill="#f8f9fa" />
-                <path
-                  d="M0,128L48,138.7C96,149,192,171,288,197.3C384,224,480,256,576,245.3C672,235,768,181,864,144C960,107,1056,85,1152,96C1248,107,1344,149,1392,170.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                  fill="#5E1C80"
-                  opacity="0.1"
-                />
-                <g transform="translate(400, 300)">
-                  <g transform="scale(0.8)">
-                    {/* Meeting/Training representation */}
-                    <rect x="-200" y="-100" width="400" height="200" rx="10" fill="#f1f1f1" />
-                    <circle cx="-120" cy="0" r="40" fill="#5E1C80" opacity="0.7" />
-                    <circle cx="-40" cy="0" r="40" fill="#5E1C80" opacity="0.5" />
-                    <circle cx="40" cy="0" r="40" fill="#5E1C80" opacity="0.5" />
-                    <circle cx="120" cy="0" r="40" fill="#5E1C80" opacity="0.7" />
-                    <rect x="-180" y="-80" width="360" height="10" rx="5" fill="#ccc" />
-                    <rect x="-180" y="70" width="360" height="10" rx="5" fill="#ccc" />
-                  </g>
-                </g>
-              </svg>
+              <div className="w-full h-full bg-gradient-to-br from-primary to-secondary p-8 flex items-center justify-center">
+                <div className="w-full h-full absolute inset-0 opacity-15">
+                  <div className="w-full h-full bg-[url('/attached_assets/image_1745730872530.png')] bg-center bg-no-repeat bg-contain"></div>
+                </div>
+                <div className="z-10 bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 w-full max-w-md">
+                  <h3 className="text-white font-bold text-2xl text-center mb-4">برنامج تدريب احترافي</h3>
+                  <p className="text-white text-center">تطوير مهارات مهنية متكاملة وإعداد للانخراط في سوق العمل بشكل فعال</p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
