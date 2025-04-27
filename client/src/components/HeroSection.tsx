@@ -135,22 +135,11 @@ const HeroSection: React.FC = () => {
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               ></motion.div>
               <div className="rounded-full w-full h-full overflow-hidden border-4 border-white shadow-2xl">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                  <defs>
-                    <linearGradient id="teamLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#00D4D4" />
-                      <stop offset="50%" stopColor="#FFB84D" />
-                      <stop offset="100%" stopColor="#FF5A7E" />
-                    </linearGradient>
-                  </defs>
-                  <g>
-                    <circle cx="100" cy="100" r="100" fill="#5E1C80" />
-                    <path
-                      d="M100,50 C150,50 150,150 100,150 C50,150 50,50 100,50 Z"
-                      fill="url(#teamLogoGradient)"
-                    />
-                  </g>
-                </svg>
+                <img 
+                  src="/attached_assets/image_1745730872530.png" 
+                  alt="ONE TEAM Logo" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </motion.div>

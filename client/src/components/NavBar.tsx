@@ -16,8 +16,12 @@ const NavBar: React.FC = () => {
         <div className="flex items-center">
           {/* Logo */}
           <div className="flex items-center ml-6">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-secondary via-accent2 to-accent flex items-center justify-center">
-              <span className="text-white font-bold">OT</span>
+            <div className="w-10 h-10 rounded-full overflow-hidden">
+              <img 
+                src="/attached_assets/image_1745730872530.png" 
+                alt="ONE TEAM Logo" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <span className="font-poppins font-bold text-xl ml-2">ONE TEAM</span>
           </div>

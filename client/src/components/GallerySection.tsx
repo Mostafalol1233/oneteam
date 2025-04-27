@@ -2,48 +2,19 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const GallerySection: React.FC = () => {
-  // Gallery items
+  // Gallery items with background images
   const galleryItems = [
     {
       title: "جلسات تدريبية تفاعلية",
-      svg: (
-        <svg width="100%" height="100%" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-          <rect width="800" height="600" fill="#f0f0f0" />
-          <rect x="100" y="150" width="600" height="300" rx="20" fill="#e0e0e0" />
-          <circle cx="400" cy="300" r="80" fill="#5E1C80" opacity="0.7" />
-          <circle cx="250" cy="300" r="60" fill="#5E1C80" opacity="0.5" />
-          <circle cx="550" cy="300" r="60" fill="#5E1C80" opacity="0.5" />
-          <rect x="150" y="150" width="500" height="20" rx="10" fill="#ccc" />
-        </svg>
-      ),
+      bgColor: "from-primary to-secondary",
     },
     {
       title: "التدريب على المقابلات",
-      svg: (
-        <svg width="100%" height="100%" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-          <rect width="800" height="600" fill="#f0f0f0" />
-          <rect x="150" y="150" width="500" height="300" rx="20" fill="#e0e0e0" />
-          <circle cx="300" cy="250" r="80" fill="#FF5A7E" opacity="0.7" />
-          <circle cx="500" cy="250" r="80" fill="#5E1C80" opacity="0.5" />
-          <rect x="200" y="400" width="400" height="20" rx="10" fill="#ccc" />
-          <rect x="250" y="430" width="300" height="20" rx="10" fill="#ccc" />
-        </svg>
-      ),
+      bgColor: "from-accent to-accent2",
     },
     {
       title: "تطوير المهارات المهنية",
-      svg: (
-        <svg width="100%" height="100%" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-          <rect width="800" height="600" fill="#f0f0f0" />
-          <rect x="150" y="100" width="500" height="400" rx="20" fill="#e0e0e0" />
-          <rect x="200" y="150" width="400" height="30" rx="15" fill="#00D4D4" opacity="0.7" />
-          <rect x="200" y="200" width="300" height="30" rx="15" fill="#00D4D4" opacity="0.5" />
-          <rect x="200" y="250" width="400" height="30" rx="15" fill="#00D4D4" opacity="0.7" />
-          <rect x="200" y="300" width="350" height="30" rx="15" fill="#00D4D4" opacity="0.5" />
-          <rect x="200" y="350" width="250" height="30" rx="15" fill="#00D4D4" opacity="0.7" />
-          <rect x="200" y="400" width="400" height="30" rx="15" fill="#00D4D4" opacity="0.5" />
-        </svg>
-      ),
+      bgColor: "from-secondary to-accent",
     },
   ];
 
@@ -71,14 +42,21 @@ const GallerySection: React.FC = () => {
               viewport={{ once: true }}
               whileHover={{ scale: 1.03 }}
             >
-              <div className="w-full h-full">{item.svg}</div>
+              <div 
+                className={`w-full h-full bg-gradient-to-br ${item.bgColor} p-8 flex items-center justify-center`}
+              >
+                <div className="w-full h-full absolute inset-0 opacity-20">
+                  <div className="w-full h-full bg-[url('/attached_assets/image_1745730872530.png')] bg-center bg-no-repeat bg-contain"></div>
+                </div>
+                <h3 className="text-white font-bold text-2xl text-center z-10 drop-shadow-lg">{item.title}</h3>
+              </div>
               <motion.div
-                className="absolute inset-0 bg-primary bg-opacity-40 flex items-center justify-center"
+                className="absolute inset-0 bg-primary bg-opacity-70 flex items-center justify-center"
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                <p className="text-white font-bold text-lg">{item.title}</p>
+                <p className="text-white font-bold text-lg px-4 text-center">{item.title}</p>
               </motion.div>
             </motion.div>
           ))}
